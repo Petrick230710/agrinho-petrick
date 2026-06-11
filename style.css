@@ -1,319 +1,47 @@
 /* ========================================
-   VARIÁVEIS GLOBAIS
+   DESIGN SYSTEM - NASA/SPACEX INSPIRED
    ======================================== */
+
 :root {
-    /* Cores Primárias */
-    --primary-green: #1a4d2a;
-    --primary-green-light: #2d6a4f;
-    --primary-green-dark: #0e3a22;
+    /* Cores Primárias - Dark Mode First */
+    --bg-primary: #0a0c10;
+    --bg-secondary: #0f1115;
+    --bg-tertiary: #15171c;
+    --bg-card: rgba(21, 23, 28, 0.8);
+    --bg-glass: rgba(21, 23, 28, 0.6);
     
-    /* Cores Secundárias */
-    --secondary-yellow: #ffd166;
-    --secondary-yellow-dark: #ffc107;
-    --secondary-yellow-light: #ffe4a3;
+    /* Cores de Destaque */
+    --accent-primary: #00d4ff;
+    --accent-secondary: #7b2ff7;
+    --accent-tertiary: #ff6b35;
+    --accent-success: #00ff88;
+    --accent-warning: #ffd166;
+    --accent-danger: #ff3366;
     
-    /* Cores Neutras */
-    --white: #ffffff;
-    --off-white: #fefef7;
-    --gray-100: #f8f9fa;
-    --gray-200: #e9ecef;
-    --gray-300: #dee2e6;
-    --gray-400: #ced4da;
-    --gray-500: #adb5bd;
-    --gray-600: #6c757d;
-    --gray-700: #495057;
-    --gray-800: #343a40;
-    --gray-900: #212529;
-    --black: #1e2f23;
-    
-    /* Sombras */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
-    --shadow-xl: 0 12px 36px rgba(0,0,0,0.16);
-    --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
-    
-    /* Espaçamentos */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --spacing-2xl: 4rem;
-    --spacing-3xl: 5rem;
-    
-    /* Bordas */
-    --border-radius-sm: 8px;
-    --border-radius-md: 12px;
-    --border-radius-lg: 20px;
-    --border-radius-xl: 30px;
-    --border-radius-full: 9999px;
-    
-    /* Transições */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+    --gradient-success: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    --gradient-warm: linear-gradient(135deg, #ffd166 0%, #ff6b35 100%);
+    --gradient-dark: linear-gradient(135deg, #0a0c10 0%, #15171c 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(123, 47, 247, 0.1) 100%);
     
     /* Tipografia */
-    --font-primary: 'Inter', 'Segoe UI', sans-serif;
-    --font-display: 'Playfair Display', serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-sans: 'Space Grotesk', sans-serif;
     
-    /* Z-index */
-    --z-negative: -1;
-    --z-low: 10;
-    --z-medium: 100;
-    --z-high: 1000;
-    --z-highest: 10000;
-}
-
-/* ========================================
-   RESET & BASE
-   ======================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
-body {
-    font-family: var(--font-primary);
-    line-height: 1.5;
-    color: var(--gray-800);
-    background-color: var(--off-white);
-    overflow-x: hidden;
-}
-
-/* ========================================
-   TIPOGRAFIA
-   ======================================== */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--primary-green-dark);
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-family: var(--font-display);
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-lg);
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-@media (max-width: 768px) {
-    html { font-size: 14px; }
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.3rem; }
-}
-
-/* ========================================
-   LAYOUT & CONTAINER
-   ======================================== */
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-lg);
-}
-
-.section {
-    padding: var(--spacing-3xl) 0;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.section-tag {
-    display: inline-block;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--secondary-yellow-dark);
-    background: rgba(255, 209, 102, 0.15);
-    padding: 0.25rem 1rem;
-    border-radius: var(--border-radius-full);
-    margin-bottom: var(--spacing-md);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.section-subtitle {
-    font-size: 1.125rem;
-    color: var(--gray-600);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.section-header.light .section-title,
-.section-header.light .section-subtitle {
-    color: var(--white);
-}
-
-.section-header.light .section-tag {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--secondary-yellow);
-}
-
-/* ========================================
-   BOTÕES
-   ======================================== */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 2rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: var(--border-radius-full);
-    transition: var(--transition-normal);
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-}
-
-.btn-primary {
-    background: var(--secondary-yellow);
-    color: var(--primary-green-dark);
-}
-
-.btn-primary:hover {
-    background: var(--secondary-yellow-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--secondary-yellow);
-    color: var(--secondary-yellow);
-}
-
-.btn-outline:hover {
-    background: var(--secondary-yellow);
-    color: var(--primary-green-dark);
-    transform: translateY(-2px);
-}
-
-.btn-block {
-    width: 100%;
-    justify-content: center;
-}
-
-/* ========================================
-   HEADER & NAVEGAÇÃO
-   ======================================== */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: var(--z-high);
-    transition: var(--transition-normal);
-    background: transparent;
-}
-
-header.scrolled {
-    background: rgba(26, 77, 42, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-md);
-}
-
-.nav-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.75rem;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.logo i {
-    color: var(--secondary-yellow);
-    font-size: 1.5rem;
-}
-
-.logo span:first-of-type {
-    color: var(--white);
-}
-
-.logo-accent {
-    color: var(--secondary-yellow);
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.nav-link {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition-fast);
-    position: relative;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--secondary-yellow);
-    transition: var(--transition-normal);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
-}
-
-.nav-link:hover {
-    color: var(--secondary-yellow);
-}
-
-.nav-toggle {
-    display: none;
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
+    /* Efeitos */
+    --glow-primary: 0 0 20px rgba(0, 212, 255, 0.5);
+    --glow-success: 0 0 20px rgba(0, 255, 136, 0.5);
+    --glow-warm: 0 0 20px rgba(255, 209, 102, 0.5);
     
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width
-
+    /* Transições */
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Espaçamentos */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --
