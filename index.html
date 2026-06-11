@@ -2,63 +2,103 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Agro Forte: unindo produção agrícola de alta performance com sustentabilidade ambiental. Conheça nossas práticas, números e benefícios para um futuro verde.">
-    <meta name="keywords" content="agro sustentável, agricultura regenerativa, meio ambiente, produção agrícola, ESG, carbono neutro">
-    <meta name="author" content="Agro Forte">
-    <meta name="theme-color" content="#1a4d2a">
-    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="description" content="Agro Forte - A revolução da agricultura sustentável. Tecnologia, inovação e respeito ao meio ambiente para alimentar o futuro.">
+    <meta name="keywords" content="agricultura sustentável, agro tecnologia, ESG, carbono zero, regenerativo, ILPF, bioeconomia">
+    <meta name="author" content="Agro Forte Labs">
+    <meta name="theme-color" content="#0a2e1a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Agro Forte">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Agro Forte | Futuro Sustentável 🌱">
-    <meta property="og:description" content="Equilíbrio entre produção agrícola e preservação ambiental.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-    
-    <!-- Twitter -->
+    <meta property="og:title" content="Agro Forte | O futuro da agricultura sustentável">
+    <meta property="og:description" content="Tecnologia de ponta para produzir mais preservando o planeta.">
+    <meta property="og:image" content="https://agroforte.com/og-image.jpg">
+    <meta property="og:url" content="https://agroforte.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agro Forte | Futuro Sustentável">
     
-    <title>Agro Forte | Futuro Sustentável 🌱</title>
+    <title>Agro Forte | Agricultura Sustentável de Precisão</title>
     
-    <!-- Preconnect para fontes e CDNs -->
+    <!-- Preconnect e Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/js/core/app.js" as="script">
     
-    <!-- Fonts e Ícones -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
+
+<!-- ==================== PRELOADER ==================== -->
+<div id="preloader">
+    <div class="preloader-content">
+        <div class="agro-logo-animated">
+            <svg viewBox="0 0 100 100">
+                <path class="logo-leaf" d="M50,20 C35,20 25,35 25,50 C25,65 35,80 50,80 C65,80 75,65 75,50 C75,35 65,20 50,20Z" fill="none" stroke="#ffd166" stroke-width="2"/>
+                <path class="logo-stem" d="M50,80 L50,95" stroke="#ffd166" stroke-width="2"/>
+                <circle class="logo-dot" cx="50" cy="20" r="3" fill="#ffd166"/>
+            </svg>
+        </div>
+        <div class="loading-text">CARREGANDO SISTEMA AGRO</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        <div class="loading-percent">0%</div>
+    </div>
+</div>
+
+<!-- ==================== CURSOR PERSONALIZADO ==================== -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
 
 <!-- ==================== HEADER ==================== -->
 <header id="mainHeader">
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-leaf"></i>
-                <span>Agro</span><span class="logo-accent">Forte</span>
+            <div class="logo-container">
+                <div class="logo-3d" data-glitch="AgroForte">🌱 AgroForte</div>
             </div>
             
             <div class="nav-menu" id="navMenu">
                 <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Início</a></li>
-                    <li><a href="#pilares" class="nav-link">Pilares</a></li>
-                    <li><a href="#impacto" class="nav-link">Impacto</a></li>
-                    <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
-                    <li><a href="#solucoes" class="nav-link">Soluções</a></li>
-                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                    <li><a href="#home" class="nav-link" data-text="Início">Início</a></li>
+                    <li><a href="#pilares" class="nav-link" data-text="Pilares">Pilares</a></li>
+                    <li><a href="#impacto" class="nav-link" data-text="Impacto">Impacto</a></li>
+                    <li><a href="#tecnologia" class="nav-link" data-text="Tecnologia">Tecnologia</a></li>
+                    <li><a href="#solucoes" class="nav-link" data-text="Soluções">Soluções</a></li>
+                    <li><a href="#insights" class="nav-link" data-text="Insights">Insights</a></li>
+                    <li><a href="#contato" class="nav-link" data-text="Contato">Contato</a></li>
                 </ul>
             </div>
             
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -66,395 +106,427 @@
 
 <main>
 
-<!-- ==================== HERO SECTION ==================== -->
-<section id="home" class="hero">
-    <div class="hero-background">
-        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-            <source src="https://cdn.pixabay.com/video/2022/08/09/127328-735712387_large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-    </div>
+<!-- ==================== HERO SECTION 3D ==================== -->
+<section id="home" class="hero-3d">
+    <canvas id="heroCanvas"></canvas>
     
-    <div class="hero-content container">
-        <div class="hero-badge">
-            <i class="fas fa-seedling"></i> Agricultura do Futuro
+    <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-up">
+            <span class="pulse-dot"></span> SISTEMA OPERACIONAL AGRO 2.0
         </div>
-        <h1 class="hero-title">
-            Agro <span class="highlight">forte</span>,<br>
-            futuro <span class="highlight">sustentável</span>
+        
+        <h1 data-aos="fade-up" data-aos-delay="100">
+            <span class="text-gradient">Agro Forte</span><br>
+            Futuro Sustentável
         </h1>
-        <p class="hero-subtitle">
-            Produzir mais, preservar sempre. O equilíbrio que alimenta o mundo<br>
-            sem destruir o planeta que nos sustenta.
+        
+        <p data-aos="fade-up" data-aos-delay="200">
+            Integrando Inteligência Artificial, IoT e Biotecnologia para criar o<br>
+            ecossistema agrícola mais eficiente e regenerativo do planeta.
         </p>
-        <div class="hero-buttons">
-            <a href="#pilares" class="btn btn-primary">
-                <i class="fas fa-chart-line"></i> Explorar soluções
-            </a>
-            <a href="#impacto" class="btn btn-outline">
-                <i class="fas fa-chart-bar"></i> Ver resultados
-            </a>
+        
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+            <button class="btn-glow" id="exploreBtn">
+                <span>EXPLORAR SISTEMA</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn-outline-glow" id="demoBtn">
+                <i class="fas fa-play"></i>
+                <span>VER DEMO</span>
+            </button>
         </div>
         
-        <div class="hero-stats">
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
             <div class="hero-stat">
-                <span class="hero-stat-number">+40%</span>
-                <span class="hero-stat-label">Produtividade</span>
+                <div class="stat-value" data-target="98.7">0</div>
+                <div class="stat-label">Eficiência hídrica</div>
             </div>
             <div class="hero-stat">
-                <span class="hero-stat-number">-70%</span>
-                <span class="hero-stat-label">Emissões</span>
+                <div class="stat-value" data-target="156">0</div>
+                <div class="stat-label">Projetos ativos</div>
             </div>
             <div class="hero-stat">
-                <span class="hero-stat-number">30M</span>
-                <span class="hero-stat-label">ha recuperados</span>
+                <div class="stat-value" data-target="24">0</div>
+                <div class="stat-label">Países impactados</div>
             </div>
         </div>
     </div>
     
-    <div class="hero-scroll">
-        <a href="#pilares">
-            <i class="fas fa-chevron-down"></i>
-        </a>
+    <div class="scroll-indicator">
+        <div class="mouse"></div>
+        <div class="scroll-text">SCROLL</div>
     </div>
 </section>
 
-<!-- ==================== PILARES SECTION ==================== -->
+<!-- ==================== PILARES ==================== -->
 <section id="pilares" class="section pilares">
+    <div class="section-bg"></div>
+    
     <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Nossa Base</span>
-            <h2 class="section-title">Pilares do Agro Sustentável</h2>
-            <p class="section-subtitle">Quatro fundamentos que guiam nossa missão de transformar o campo</p>
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-tag">ARQUITETURA DE IMPACTO</div>
+            <h2 class="section-title">Quatro Pilares da<br>Revolução Verde</h2>
+            <div class="section-divider">
+                <svg width="60" height="4" viewBox="0 0 60 4">
+                    <rect width="60" height="4" fill="url(#gradient)" rx="2"/>
+                </svg>
+            </div>
         </div>
         
-        <div class="cards-grid">
-            <div class="card card-premium">
-                <div class="card-icon">
-                    <i class="fas fa-tractor"></i>
+        <div class="pilares-grid">
+            <div class="pilar-card" data-aos="flip-left" data-aos-delay="0">
+                <div class="pilar-number">01</div>
+                <div class="pilar-icon">
+                    <i class="fas fa-microchip"></i>
+                    <div class="pilar-glow"></div>
                 </div>
-                <h3>Produtividade Inteligente</h3>
-                <p>Agricultura de precisão, IoT, sensoriamento remoto e manejo regenerativo para colher mais com menos recursos.</p>
-                <div class="card-stats">
-                    <span>🌾 +40% colheita</span>
-                    <span>📉 -30% insumos</span>
+                <h3>Agricultura 4.0</h3>
+                <p>Sensorização em tempo real, drones autônomos e machine learning para decisões preditivas com precisão centimétrica.</p>
+                <div class="pilar-metrics">
+                    <div class="metric">
+                        <span class="metric-value">99.2%</span>
+                        <span class="metric-label">Acuracidade</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">-45%</span>
+                        <span class="metric-label">Insumos</span>
+                    </div>
+                </div>
+                <div class="pilar-tech">
+                    <span>AI</span><span>IoT</span><span>5G</span>
                 </div>
             </div>
             
-            <div class="card card-premium">
-                <div class="card-icon">
+            <div class="pilar-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="pilar-number">02</div>
+                <div class="pilar-icon">
                     <i class="fas fa-water"></i>
+                    <div class="pilar-glow"></div>
                 </div>
-                <h3>Uso Consciente da Água</h3>
-                <p>Irrigação por gotejamento, reuso de água, captação pluvial e monitoramento hídrico em tempo real.</p>
-                <div class="card-stats">
-                    <span>💧 -50% consumo</span>
-                    <span>🌊 +80% eficiência</span>
+                <h3>Gestão Hídrica</h3>
+                <p>Sistema neural de irrigação que prevê demanda hídrica com base em dados climáticos e de solo em tempo real.</p>
+                <div class="pilar-metrics">
+                    <div class="metric">
+                        <span class="metric-value">-62%</span>
+                        <span class="metric-label">Água</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">+38%</span>
+                        <span class="metric-label">Produtividade</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="card card-premium">
-                <div class="card-icon">
-                    <i class="fas fa-tree"></i>
-                </div>
-                <h3>Preservação Ambiental</h3>
-                <p>ILPF, recuperação de APPs, corredores ecológicos e sequestro de carbono.</p>
-                <div class="card-stats">
-                    <span>🌳 30M ha protegidos</span>
-                    <span>🔄 carbono neutro</span>
+                <div class="pilar-tech">
+                    <span>AI</span><span>Satélite</span><span>LIDAR</span>
                 </div>
             </div>
             
-            <div class="card card-premium">
-                <div class="card-icon">
+            <div class="pilar-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="pilar-number">03</div>
+                <div class="pilar-icon">
+                    <i class="fas fa-leaf"></i>
+                    <div class="pilar-glow"></div>
+                </div>
+                <h3>Carbono Zero</h3>
+                <p>Blockchain para rastreamento de carbono, créditos verificáveis e certificação internacional de neutralidade climática.</p>
+                <div class="pilar-metrics">
+                    <div class="metric">
+                        <span class="metric-value">-87%</span>
+                        <span class="metric-label">CO₂</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">2.4M</span>
+                        <span class="metric-label">ton CO₂/ano</span>
+                    </div>
+                </div>
+                <div class="pilar-tech">
+                    <span>Blockchain</span><span>Token</span><span>ESG</span>
+                </div>
+            </div>
+            
+            <div class="pilar-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="pilar-number">04</div>
+                <div class="pilar-icon">
                     <i class="fas fa-solar-panel"></i>
+                    <div class="pilar-glow"></div>
                 </div>
-                <h3>Energia Limpa</h3>
-                <p>Biogás, energia solar fotovoltaica, biomassa e biodigestores descarbonizando o agro.</p>
-                <div class="card-stats">
-                    <span>⚡ 100% renovável</span>
-                    <span>🏭 -70% CO2</span>
+                <h3>Bioenergia</h3>
+                <p>Microgrids inteligentes com energia solar, biogás e armazenamento, alcançando independência energética total.</p>
+                <div class="pilar-metrics">
+                    <div class="metric">
+                        <span class="metric-value">100%</span>
+                        <span class="metric-label">Renovável</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">-94%</span>
+                        <span class="metric-label">Custo energia</span>
+                    </div>
+                </div>
+                <div class="pilar-tech">
+                    <span>Solar</span><span>Biogás</span><span>Grid</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== IMPACTO SECTION ==================== -->
-<section id="impacto" class="section stats-section">
+<!-- ==================== IMPACTO INTERATIVO ==================== -->
+<section id="impacto" class="section impacto">
     <div class="container">
-        <div class="section-header light">
-            <span class="section-tag">Resultados Reais</span>
-            <h2 class="section-title">Impacto que Transforma</h2>
-            <p class="section-subtitle">Números que comprovam que é possível produzir e preservar</p>
+        <div class="impacto-grid">
+            <div class="impacto-content" data-aos="fade-right">
+                <div class="section-tag">METRICS DASHBOARD</div>
+                <h2>Impacto em<br>Tempo Real</h2>
+                <p>Nosso sistema de monitoramento contínuo coleta e analisa dados de todas as operações, gerando insights acionáveis.</p>
+                
+                <div class="impacto-highlights">
+                    <div class="highlight">
+                        <div class="highlight-icon">🌍</div>
+                        <div class="highlight-text">
+                            <strong>+1.2M hectares</strong>
+                            <span>em regeneração ativa</span>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-icon">👥</div>
+                        <div class="highlight-text">
+                            <strong>+45k famílias</strong>
+                            <span>beneficiadas diretamente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="impacto-dashboard" data-aos="fade-left">
+                <div class="dashboard-container">
+                    <div class="dashboard-header">
+                        <span class="dashboard-dot green"></span>
+                        <span class="dashboard-dot yellow"></span>
+                        <span class="dashboard-dot red"></span>
+                        <span class="dashboard-title">AGRO-OS v2.0</span>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="metric-card">
+                            <div class="metric-title">PRODUTIVIDADE MÉDIA</div>
+                            <div class="metric-value-large" id="prodMetric">0</div>
+                            <div class="metric-trend up">+23.4% vs média nacional</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">SAÚDE DO SOLO</div>
+                            <div class="metric-progress">
+                                <div class="progress-bar" style="width: 78%"></div>
+                            </div>
+                            <div class="metric-label">Índice de matéria orgânica</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">CARBONO SEQUESTRADO</div>
+                            <div class="metric-value" id="carbonMetric">0</div>
+                            <div class="metric-unit">ton CO₂ equivalente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TECNOLOGIA 3D ==================== -->
+<section id="tecnologia" class="section tecnologia">
+    <div class="tecnologia-bg">
+        <div class="particles-js" id="particles"></div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-tag">TECH STACK</div>
+            <h2 class="section-title">Tecnologia que<br>Revoluciona o Campo</h2>
         </div>
         
-        <div class="stats-grid" id="statsGrid">
-            <div class="stat-item">
-                <div class="stat-number" data-target="40" data-suffix="%">0</div>
-                <div class="stat-label">Aumento de produtividade</div>
-                <div class="stat-desc">com sistemas sustentáveis</div>
+        <div class="tech-grid">
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="0">
+                <div class="tech-3d">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h4>Monitoramento Satelital</h4>
+                <p>Imagens multiespectrais diárias com resolução de 50cm</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="30" data-suffix="M">0</div>
-                <div class="stat-label">Hectares recuperados</div>
-                <div class="stat-desc">no território brasileiro</div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="tech-3d">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4>IA Preditiva</h4>
+                <p>Modelos treinados com +10M de dados históricos</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="70" data-prefix="-" data-suffix="%">0</div>
-                <div class="stat-label">Redução de emissões</div>
-                <div class="stat-desc">com boas práticas agrícolas</div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="tech-3d">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h4>Drones Autônomos</h4>
+                <p>Frota de 500 drones com pulverização de precisão</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="15" data-suffix="%">0</div>
-                <div class="stat-label">Aumento de renda</div>
-                <div class="stat-desc">no campo com sustentabilidade</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== BENEFÍCIOS SECTION ==================== -->
-<section id="beneficios" class="section beneficios">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Vantagens</span>
-            <h2 class="section-title">Benefícios para Todos</h2>
-            <p class="section-subtitle">A sustentabilidade não é custo – é investimento com retorno garantido</p>
-        </div>
-        
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-globe-americas"></i></div>
-                <h3>Para o Planeta</h3>
-                <p>Redução do desmatamento, conservação da biodiversidade, sequestro de carbono e recuperação de solos degradados.</p>
-                <ul class="benefit-list">
-                    <li><i class="fas fa-check"></i> Carbono neutro</li>
-                    <li><i class="fas fa-check"></i> Biodiversidade protegida</li>
-                    <li><i class="fas fa-check"></i> Água preservada</li>
-                </ul>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                <h3>Para o Produtor</h3>
-                <p>Solo mais fértil, redução de custos com insumos, acesso a mercados verdes e certificações premium.</p>
-                <ul class="benefit-list">
-                    <li><i class="fas fa-check"></i> +15% renda média</li>
-                    <li><i class="fas fa-check"></i> Crédito verde</li>
-                    <li><i class="fas fa-check"></i> Selos internacionais</li>
-                </ul>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-users"></i></div>
-                <h3>Para a Sociedade</h3>
-                <p>Alimentos mais saudáveis, sem agrotóxicos, água limpa e ar puro para todos os brasileiros.</p>
-                <ul class="benefit-list">
-                    <li><i class="fas fa-check"></i> Segurança alimentar</li>
-                    <li><i class="fas fa-check"></i> Qualidade de vida</li>
-                    <li><i class="fas fa-check"></i> Saúde pública</li>
-                </ul>
-            </div>
-            
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Para a Economia</h3>
-                <p>Geração de empregos verdes, inovação tecnológica e liderança global do agro brasileiro.</p>
-                <ul class="benefit-list">
-                    <li><i class="fas fa-check"></i> +2 milhões empregos</li>
-                    <li><i class="fas fa-check"></i> Inovação aberta</li>
-                    <li><i class="fas fa-check"></i> Exportações verdes</li>
-                </ul>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="tech-3d">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h4>Blockchain</h4>
+                <p>Rastreabilidade imutável da fazenda à mesa</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== SOLUÇÕES SECTION ==================== -->
+<!-- ==================== SOLUÇÕES ==================== -->
 <section id="solucoes" class="section solucoes">
     <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Tecnologias</span>
-            <h2 class="section-title">Soluções Inovadoras</h2>
-            <p class="section-subtitle">Tecnologia de ponta a serviço da sustentabilidade</p>
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-tag">PRODUCTS</div>
+            <h2 class="section-title">Soluções Integradas<br>para o Agro 4.0</h2>
         </div>
         
-        <div class="solucoes-grid">
-            <div class="solucao-item">
-                <div class="solucao-image">
-                    <i class="fas fa-microchip"></i>
+        <div class="solucoes-slider">
+            <div class="solucao-card" data-aos="fade-right">
+                <div class="solucao-media">
+                    <div class="solucao-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
                 </div>
-                <h3>Agricultura de Precisão</h3>
-                <p>Drones, sensores e IA para monitoramento em tempo real das lavouras, reduzindo desperdícios.</p>
-                <div class="solucao-tech">
-                    <span>IoT</span>
-                    <span>Machine Learning</span>
-                    <span>Big Data</span>
-                </div>
-            </div>
-            
-            <div class="solucao-item">
-                <div class="solucao-image">
-                    <i class="fas fa-droplet"></i>
-                </div>
-                <h3>Irrigação Inteligente</h3>
-                <p>Sistemas automatizados que aplicam água apenas onde e quando necessário, com economia de até 60%.</p>
-                <div class="solucao-tech">
-                    <span>Sensores</span>
-                    <span>Automação</span>
-                    <span>Climatologia</span>
+                <h3>AgroCloud Platform</h3>
+                <p>Plataforma unificada de gestão agrícola com analytics avançado e API aberta.</p>
+                <div class="solucao-features">
+                    <span><i class="fas fa-chart-line"></i> Analytics</span>
+                    <span><i class="fas fa-mobile-alt"></i> Mobile</span>
+                    <span><i class="fas fa-cloud"></i> Cloud</span>
                 </div>
             </div>
             
-            <div class="solucao-item">
-                <div class="solucao-image">
-                    <i class="fas fa-recycle"></i>
+            <div class="solucao-card" data-aos="fade-up">
+                <div class="solucao-media">
+                    <div class="solucao-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
                 </div>
-                <h3>Bioeconomia Circular</h3>
-                <p>Aproveitamento de resíduos para produção de biogás, biofertilizantes e novos produtos.</p>
-                <div class="solucao-tech">
-                    <span>Biogás</span>
-                    <span>Compostagem</span>
-                    <span>Upcycling</span>
+                <h3>BioSense Sensors</h3>
+                <p>Sensores IoT de solo, clima e planta com transmissão em tempo real.</p>
+                <div class="solucao-features">
+                    <span><i class="fas fa-wifi"></i> LoRaWAN</span>
+                    <span><i class="fas fa-battery-full"></i> 5 anos</span>
+                    <span><i class="fas fa-chart-line"></i> Real-time</span>
                 </div>
             </div>
             
-            <div class="solucao-item">
-                <div class="solucao-image">
-                    <i class="fas fa-chart-simple"></i>
+            <div class="solucao-card" data-aos="fade-left">
+                <div class="solucao-media">
+                    <div class="solucao-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
                 </div>
-                <h3>Blockchain Rastreável</h3>
-                <p>Registro imutável da cadeia produtiva, garantindo origem sustentável e acesso a mercados premium.</p>
-                <div class="solucao-tech">
-                    <span>Blockchain</span>
-                    <span>Rastreabilidade</span>
-                    <span>Certificação</span>
+                <h3>CarbonTracker</h3>
+                <p>Sistema de monitoramento e comercialização de créditos de carbono.</p>
+                <div class="solucao-features">
+                    <span><i class="fas fa-coins"></i> Tokenização</span>
+                    <span><i class="fas fa-chart-line"></i> Mercado</span>
+                    <span><i class="fas fa-check-circle"></i> Verificado</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ==================== DEPOIMENTOS SECTION ==================== -->
-<section id="depoimentos" class="section depoimentos">
+<!-- ==================== NEWSLETTER ==================== -->
+<section id="insights" class="section newsletter-premium">
     <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Casos Reais</span>
-            <h2 class="section-title">Quem já está transformando</h2>
-            <p class="section-subtitle">Produtores e especialistas que adotaram a sustentabilidade como caminho</p>
-        </div>
-        
-        <div class="testimonials-slider">
-            <div class="testimonial-card">
-                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                <p class="testimonial-text">"A integração lavoura-pecuária-floresta revolucionou minha propriedade. Em 5 anos, recuperei as nascentes, aumentei a renda em 30% e reduzi custos com fertilizantes."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AP</div>
-                    <div class="author-info">
-                        <h4>Ana Paula Silva</h4>
-                        <span>Produtora Rural, Mato Grosso</span>
-                    </div>
+        <div class="newsletter-card" data-aos="flip-up">
+            <div class="newsletter-bg-pattern"></div>
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                <p class="testimonial-text">"Instalamos energia solar nos pivôs de irrigação. A conta de energia caiu 50% e nosso café agora tem certificação carbono neutro, abrindo mercado na Europa."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">JC</div>
-                    <div class="author-info">
-                        <h4>João Carlos Mendes</h4>
-                        <span>Cafeicultor, Minas Gerais</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                <p class="testimonial-text">"A cooperativa adotou o manejo regenerativo em 10 mil hectares. O solo se recuperou, a produtividade subiu 25% e ganhamos o prêmio de sustentabilidade do setor."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">CV</div>
-                    <div class="author-info">
-                        <h4>Coop. AgroVerde</h4>
-                        <span>Paraná</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== NEWSLETTER SECTION ==================== -->
-<section class="newsletter-section">
-    <div class="container">
-        <div class="newsletter-card">
-            <div class="newsletter-icon">
-                <i class="fas fa-envelope-open-text"></i>
-            </div>
-            <h3>Receba insights do agro sustentável</h3>
-            <p>Inovações, cases de sucesso e tendências do setor direto no seu e-mail</p>
-            <form id="newsletterForm" class="newsletter-form">
-                <div class="form-group">
-                    <input type="text" id="newsName" placeholder="Seu nome" required>
-                    <input type="email" id="newsEmail" placeholder="Seu melhor e-mail" required>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Inscrever-se gratuitamente
-                </button>
-            </form>
-            <p class="newsletter-note">💚 Receba apenas conteúdo relevante. Cancelar quando quiser.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== CONTATO SECTION ==================== -->
-<section id="contato" class="section contato">
-    <div class="container">
-        <div class="contato-grid">
-            <div class="contato-info">
-                <span class="section-tag">Fale Conosco</span>
-                <h2>Vamos construir<br>o futuro do agro juntos</h2>
-                <p>Entre em contato para parcerias, consultorias ou para saber mais sobre como implementar práticas sustentáveis na sua propriedade.</p>
+                <h3>Receba o Agro Insights Report</h3>
+                <p>Análises exclusivas, tendências de mercado e cases de sucesso entregues semanalmente.</p>
                 
-                <div class="contato-detalhes">
-                    <div class="contato-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Visite-nos</strong>
-                            <p>SHIS QI 11, Brasília - DF, 71600-000</p>
-                        </div>
+                <form id="premiumNewsletter" class="newsletter-form-premium">
+                    <div class="form-group-premium">
+                        <input type="text" placeholder="Nome completo" required>
+                        <input type="email" placeholder="E-mail corporativo" required>
+                        <input type="text" placeholder="Cargo / Empresa" required>
                     </div>
-                    <div class="contato-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Ligue para nós</strong>
-                            <p>+55 (61) 99999-1234</p>
-                        </div>
+                    <button type="submit" class="btn-subscribe">
+                        <span>ASSINAR NEWSLETTER</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                
+                <div class="newsletter-trust">
+                    <i class="fas fa-lock"></i> Seus dados estão seguros
+                    <i class="fas fa-envelope"></i> 1 e-mail por semana
+                    <i class="fas fa-chart-line"></i> Exclusivo para líderes
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTATO ==================== -->
+<section id="contato" class="section contato-premium">
+    <div class="container">
+        <div class="contato-grid-premium">
+            <div class="contato-info-premium" data-aos="fade-right">
+                <div class="section-tag">CONTACT</div>
+                <h2>Vamos Transformar<br>o Agro Juntos</h2>
+                <p>Nossa equipe de especialistas está pronta para desenvolver a melhor solução para sua operação.</p>
+                
+                <div class="contato-detalhes-premium">
+                    <div class="contato-item-premium">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>+55 (61) 4000-1234</div>
                     </div>
-                    <div class="contato-item">
+                    <div class="contato-item-premium">
                         <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Envie um e-mail</strong>
-                            <p>sustentabilidade@agroforte.com</p>
-                        </div>
+                        <div>hello@agroforte.com</div>
                     </div>
+                    <div class="contato-item-premium">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>SCES Quadra 08, Brasília - DF</div>
+                    </div>
+                </div>
+                
+                <div class="social-premium">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
                 </div>
             </div>
             
-            <div class="contato-form">
-                <form id="contactForm">
-                    <div class="form-row">
-                        <input type="text" placeholder="Nome completo" required>
-                        <input type="email" placeholder="E-mail" required>
+            <div class="contato-form-premium" data-aos="fade-left">
+                <form id="premiumContactForm">
+                    <div class="form-row-premium">
+                        <div class="input-group-premium">
+                            <input type="text" id="nome" required>
+                            <label>Nome completo</label>
+                        </div>
+                        <div class="input-group-premium">
+                            <input type="email" id="email" required>
+                            <label>E-mail</label>
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <input type="tel" placeholder="Telefone">
-                        <input type="text" placeholder="Cidade/Estado">
+                    <div class="form-row-premium">
+                        <div class="input-group-premium">
+                            <input type="tel" id="telefone">
+                            <label>Telefone</label>
+                        </div>
+                        <div class="input-group-premium">
+                            <input type="text" id="empresa">
+                            <label>Empresa</label>
+                        </div>
                     </div>
-                    <textarea rows="5" placeholder="Sua mensagem..."></textarea>
-                    <button type="submit" class="btn btn-primary btn-block">
-                        <i class="fas fa-paper-plane"></i> Enviar mensagem
+                    <div class="input-group-premium">
+                        <textarea id="mensagem" rows="4" required></textarea>
+                        <label>Mensagem</label>
+                    </div>
+                    <button type="submit" class="btn-submit-premium">
+                        <span>ENVIAR MENSAGEM</span>
+                        <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
@@ -465,75 +537,95 @@
 </main>
 
 <!-- ==================== FOOTER ==================== -->
-<footer class="footer">
+<footer class="footer-premium">
+    <div class="footer-glow"></div>
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="logo">
-                    <i class="fas fa-leaf"></i>
-                    <span>Agro</span><span class="logo-accent">Forte</span>
-                </div>
-                <p>Produção e meio ambiente em harmonia. Alimentando o mundo sem destruir o planeta.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <div class="footer-grid-premium">
+            <div class="footer-brand-premium">
+                <div class="logo-premium">🌱 Agro<span>Forte</span></div>
+                <p>Revolucionando a agricultura com tecnologia de ponta e compromisso com o futuro do planeta.</p>
+                <div class="footer-badges">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23ffd166' stroke-width='2'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23ffd166' font-size='10'%3EB Corp%3C/text%3E%3C/svg%3E" alt="B Corp">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='none' stroke='%23ffd166' stroke-width='2'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23ffd166' font-size='8'%3ECarbono%3C/text%3E%3C/svg%3E" alt="Carbon Neutral">
                 </div>
             </div>
             
-            <div class="footer-links">
-                <h4>Navegação</h4>
+            <div class="footer-links-premium">
+                <h4>Plataforma</h4>
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#pilares">Pilares</a></li>
-                    <li><a href="#impacto">Impacto</a></li>
-                    <li><a href="#beneficios">Benefícios</a></li>
-                    <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#">AgroCloud</a></li>
+                    <li><a href="#">BioSense</a></li>
+                    <li><a href="#">CarbonTracker</a></li>
+                    <li><a href="#">API Developers</a></li>
                 </ul>
             </div>
             
-            <div class="footer-links">
+            <div class="footer-links-premium">
                 <h4>Recursos</h4>
                 <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Cases de sucesso</a></li>
-                    <li><a href="#">Materiais gratuitos</a></li>
+                    <li><a href="#">Blog Técnico</a></li>
                     <li><a href="#">Webinars</a></li>
-                    <li><a href="#">Certificações</a></li>
+                    <li><a href="#">Cases</a></li>
+                    <li><a href="#">Documentação</a></li>
                 </ul>
             </div>
             
-            <div class="footer-links">
+            <div class="footer-links-premium">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Código de Ética</a></li>
-                    <li><a href="#">Relatório de Impacto</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Compliance</a></li>
                 </ul>
             </div>
         </div>
         
-        <div class="footer-bottom">
-            <p>&copy; 2025 Agro Forte - Futuro Sustentável. Todos os direitos reservados.</p>
-            <p class="footer-mission">🌱 É possível alimentar o mundo e cuidar da nossa casa comum.</p>
+        <div class="footer-bottom-premium">
+            <div class="copyright">
+                © 2025 Agro Forte Labs. Todos os direitos reservados.
+            </div>
+            <div class="footer-lang">
+                <span>🌐 PT-BR</span>
+                <span>🇺🇸 EN</span>
+                <span>🇪🇸 ES</span>
+            </div>
         </div>
     </div>
 </footer>
 
-<!-- Botão "Voltar ao topo" -->
-<button id="backToTop" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-</button>
+<!-- ==================== SCRIPTS ==================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<!-- Scripts -->
-<script src="assets/js/navigation.js"></script>
-<script src="assets/js/counters.js"></script>
-<script src="assets/js/animations.js"></script>
-<script src="assets/js/newsletter.js"></script>
-<script src="main.js"></script>
+<script src="assets/js/core/app.js"></script>
+<script src="assets/js/modules/animations.js"></script>
+<script src="assets/js/modules/counters.js"></script>
+<script src="assets/js/modules/navigation.js"></script>
+<script src="assets/js/modules/scrollEffects.js"></script>
+<script src="assets/js/modules/formHandler.js"></script>
+<script src="assets/js/modules/themeSwitcher.js"></script>
+<script src="assets/js/modules/pwa.js"></script>
+
+<script>
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-quad'
+        });
+        
+        initPreloader();
+        initHero3D();
+        initParticles();
+        initCounters();
+        initCursor();
+    });
+</script>
 </body>
 </html>
