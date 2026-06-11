@@ -3,555 +3,537 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Agro Forte: unindo produção agrícola de alta performance com sustentabilidade ambiental. Conheça nossas práticas, números e benefícios.">
+    <meta name="description" content="Agro Forte: unindo produção agrícola de alta performance com sustentabilidade ambiental. Conheça nossas práticas, números e benefícios para um futuro verde.">
+    <meta name="keywords" content="agro sustentável, agricultura regenerativa, meio ambiente, produção agrícola, ESG, carbono neutro">
+    <meta name="author" content="Agro Forte">
     <meta name="theme-color" content="#1a4d2a">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Agro Forte | Futuro Sustentável 🌱">
+    <meta property="og:description" content="Equilíbrio entre produção agrícola e preservação ambiental.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agro Forte | Futuro Sustentável">
+    
     <title>Agro Forte | Futuro Sustentável 🌱</title>
+    
+    <!-- Preconnect para fontes e CDNs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            line-height: 1.5;
-            color: #1e2f23;
-            background-color: #fefef7;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        /* Animações globais */
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes glowPulse {
-            0% { text-shadow: 0 0 0px rgba(255,209,102,0); }
-            100% { text-shadow: 0 0 12px rgba(255,209,102,0.6); }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .animate-on-scroll.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Header premium */
-        header {
-            background: rgba(26, 77, 42, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 0.8rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        header.scrolled {
-            padding: 0.5rem 0;
-            background: rgba(10, 35, 20, 0.98);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-
-        nav {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff, #ffd166);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .logo span {
-            color: #ffd166;
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: #ffd166;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #ffd166;
-        }
-
-        /* Hero section com vídeo e overlay */
-        .hero {
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(26,77,42,0.7));
-            z-index: -1;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            padding: 0 2rem;
-            animation: fadeUp 1s ease;
-        }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #ffd166;
-            color: #1a4d2a;
-            padding: 14px 36px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .btn:hover {
-            background: #ffc107;
-            transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #ffd166;
-            color: #ffd166;
-            margin-left: 1rem;
-        }
-
-        .btn-outline:hover {
-            background: #ffd166;
-            color: #1a4d2a;
-        }
-
-        /* Seções gerais */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1a4d2a;
-            font-weight: 700;
-        }
-
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #ffd166, #2d6a4f);
-            margin: 0.8rem auto;
-            border-radius: 2px;
-        }
-
-        /* Cards melhorados */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border: 1px solid #eef2e6;
-        }
-
-        .card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 24px 40px rgba(0,0,0,0.12);
-        }
-
-        .card-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.2rem;
-        }
-
-        /* Stats com contagem animada */
-        .stats {
-            background: linear-gradient(125deg, #0e3a22, #1b5e3f);
-            color: white;
-            border-radius: 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2.5rem;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #ffd166;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Benefícios com ícones */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 2rem;
-        }
-
-        .benefit-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-bottom: 4px solid #ffd166;
-        }
-
-        .benefit-item i {
-            font-size: 2.5rem;
-            color: #2d6a4f;
-            margin-bottom: 1rem;
-        }
-
-        /* Depoimentos */
-        .testimonials {
-            background: #f1f6ec;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 24px;
-            font-style: italic;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-
-        /* Newsletter */
-        .newsletter {
-            background: linear-gradient(115deg, #1a4d2a, #2d6a4f);
-            color: white;
-            text-align: center;
-            border-radius: 40px;
-            margin: 2rem auto;
-            max-width: 900px;
-            padding: 3rem;
-        }
-
-        .newsletter input {
-            padding: 14px 20px;
-            border-radius: 50px;
-            border: none;
-            width: 280px;
-            margin: 1rem 0.5rem;
-            font-size: 1rem;
-        }
-
-        .newsletter button {
-            background: #ffd166;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        /* Footer premium */
-        footer {
-            background: #0b2313;
-            color: #ccc;
-            padding: 3rem 2rem 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .social-icons a {
-            color: #ffd166;
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            transition: 0.3s;
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.2rem; }
-            .section-title { font-size: 1.8rem; }
-            nav { flex-direction: column; gap: 1rem; }
-            .btn-outline { margin-left: 0; margin-top: 1rem; display: inline-block; }
-        }
-    </style>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
 </head>
 <body>
 
+<!-- ==================== HEADER ==================== -->
 <header id="mainHeader">
-    <nav>
-        <div class="logo">🌱 Agro<span>Forte</span></div>
-        <ul class="nav-links">
-            <li><a href="#home" class="nav-link">Início</a></li>
-            <li><a href="#pilares" class="nav-link">Pilares</a></li>
-            <li><a href="#impacto" class="nav-link">Impacto</a></li>
-            <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
-            <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Agro</span><span class="logo-accent">Forte</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#pilares" class="nav-link">Pilares</a></li>
+                    <li><a href="#impacto" class="nav-link">Impacto</a></li>
+                    <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+                    <li><a href="#solucoes" class="nav-link">Soluções</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
 </header>
 
+<main>
+
+<!-- ==================== HERO SECTION ==================== -->
 <section id="home" class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-        <source src="https://cdn.pixabay.com/video/2022/08/09/127328-735712387_large.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Agro forte,<br> futuro sustentável 🌍</h1>
-        <p>Produzir mais, preservar sempre. O equilíbrio que alimenta o mundo sem destruir o planeta.</p>
-        <a href="#pilares" class="btn">🌾 Explorar soluções</a>
-        <a href="#impacto" class="btn btn-outline">📊 Ver resultados</a>
+    <div class="hero-background">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+            <source src="https://cdn.pixabay.com/video/2022/08/09/127328-735712387_large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content container">
+        <div class="hero-badge">
+            <i class="fas fa-seedling"></i> Agricultura do Futuro
+        </div>
+        <h1 class="hero-title">
+            Agro <span class="highlight">forte</span>,<br>
+            futuro <span class="highlight">sustentável</span>
+        </h1>
+        <p class="hero-subtitle">
+            Produzir mais, preservar sempre. O equilíbrio que alimenta o mundo<br>
+            sem destruir o planeta que nos sustenta.
+        </p>
+        <div class="hero-buttons">
+            <a href="#pilares" class="btn btn-primary">
+                <i class="fas fa-chart-line"></i> Explorar soluções
+            </a>
+            <a href="#impacto" class="btn btn-outline">
+                <i class="fas fa-chart-bar"></i> Ver resultados
+            </a>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <span class="hero-stat-number">+40%</span>
+                <span class="hero-stat-label">Produtividade</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">-70%</span>
+                <span class="hero-stat-label">Emissões</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">30M</span>
+                <span class="hero-stat-label">ha recuperados</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-scroll">
+        <a href="#pilares">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </div>
 </section>
 
-<section id="pilares">
+<!-- ==================== PILARES SECTION ==================== -->
+<section id="pilares" class="section pilares">
     <div class="container">
-        <h2 class="section-title animate-on-scroll">Nossos Pilares de Impacto</h2>
+        <div class="section-header">
+            <span class="section-tag">Nossa Base</span>
+            <h2 class="section-title">Pilares do Agro Sustentável</h2>
+            <p class="section-subtitle">Quatro fundamentos que guiam nossa missão de transformar o campo</p>
+        </div>
+        
         <div class="cards-grid">
-            <div class="card animate-on-scroll"><div class="card-icon">🌾</div><h3>Produtividade Inteligente</h3><p>Agricultura de precisão, IoT e manejo regenerativo para colher mais com menos recursos.</p></div>
-            <div class="card animate-on-scroll"><div class="card-icon">💧</div><h3>Uso Consciente da Água</h3><p>Irrigação por gotejamento, reuso e captação pluvial – cada gota importa.</p></div>
-            <div class="card animate-on-scroll"><div class="card-icon">🌳</div><h3>Preservação Ambiental</h3><p>ILPF, recuperação de APPs e corredores ecológicos unindo produção e floresta.</p></div>
-            <div class="card animate-on-scroll"><div class="card-icon">⚡</div><h3>Energia Limpa</h3><p>Biogás, solar e biomassa – descarbonizando o agro.</p></div>
+            <div class="card card-premium">
+                <div class="card-icon">
+                    <i class="fas fa-tractor"></i>
+                </div>
+                <h3>Produtividade Inteligente</h3>
+                <p>Agricultura de precisão, IoT, sensoriamento remoto e manejo regenerativo para colher mais com menos recursos.</p>
+                <div class="card-stats">
+                    <span>🌾 +40% colheita</span>
+                    <span>📉 -30% insumos</span>
+                </div>
+            </div>
+            
+            <div class="card card-premium">
+                <div class="card-icon">
+                    <i class="fas fa-water"></i>
+                </div>
+                <h3>Uso Consciente da Água</h3>
+                <p>Irrigação por gotejamento, reuso de água, captação pluvial e monitoramento hídrico em tempo real.</p>
+                <div class="card-stats">
+                    <span>💧 -50% consumo</span>
+                    <span>🌊 +80% eficiência</span>
+                </div>
+            </div>
+            
+            <div class="card card-premium">
+                <div class="card-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h3>Preservação Ambiental</h3>
+                <p>ILPF, recuperação de APPs, corredores ecológicos e sequestro de carbono.</p>
+                <div class="card-stats">
+                    <span>🌳 30M ha protegidos</span>
+                    <span>🔄 carbono neutro</span>
+                </div>
+            </div>
+            
+            <div class="card card-premium">
+                <div class="card-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <h3>Energia Limpa</h3>
+                <p>Biogás, energia solar fotovoltaica, biomassa e biodigestores descarbonizando o agro.</p>
+                <div class="card-stats">
+                    <span>⚡ 100% renovável</span>
+                    <span>🏭 -70% CO2</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="impacto" class="stats">
+<!-- ==================== IMPACTO SECTION ==================== -->
+<section id="impacto" class="section stats-section">
     <div class="container">
-        <h2 class="section-title animate-on-scroll" style="color:white;">Números que Transformam</h2>
-        <div class="stats-grid">
-            <div><div class="stat-number" data-target="40">0</div><p>% mais produtividade</p></div>
-            <div><div class="stat-number" data-target="30">0</div><p>milhões de hectares recuperados</p></div>
-            <div><div class="stat-number" data-target="70">0</div><p>% menos emissões de carbono</p></div>
-            <div><div class="stat-number" data-target="15">0</div><p>% aumento de renda no campo</p></div>
+        <div class="section-header light">
+            <span class="section-tag">Resultados Reais</span>
+            <h2 class="section-title">Impacto que Transforma</h2>
+            <p class="section-subtitle">Números que comprovam que é possível produzir e preservar</p>
+        </div>
+        
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="40" data-suffix="%">0</div>
+                <div class="stat-label">Aumento de produtividade</div>
+                <div class="stat-desc">com sistemas sustentáveis</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="30" data-suffix="M">0</div>
+                <div class="stat-label">Hectares recuperados</div>
+                <div class="stat-desc">no território brasileiro</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="70" data-prefix="-" data-suffix="%">0</div>
+                <div class="stat-label">Redução de emissões</div>
+                <div class="stat-desc">com boas práticas agrícolas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="15" data-suffix="%">0</div>
+                <div class="stat-label">Aumento de renda</div>
+                <div class="stat-desc">no campo com sustentabilidade</div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="beneficios">
+<!-- ==================== BENEFÍCIOS SECTION ==================== -->
+<section id="beneficios" class="section beneficios">
     <div class="container">
-        <h2 class="section-title animate-on-scroll">Benefícios do Novo Agro</h2>
+        <div class="section-header">
+            <span class="section-tag">Vantagens</span>
+            <h2 class="section-title">Benefícios para Todos</h2>
+            <p class="section-subtitle">A sustentabilidade não é custo – é investimento com retorno garantido</p>
+        </div>
+        
         <div class="benefits-grid">
-            <div class="benefit-item animate-on-scroll"><i class="fas fa-globe-americas"></i><br><strong>Planeta</strong><br>Sequestro de carbono, solo vivo e biodiversidade.</div>
-            <div class="benefit-item animate-on-scroll"><i class="fas fa-tractor"></i><br><strong>Produtor</strong><br>Redução de custos, crédito verde e certificações premium.</div>
-            <div class="benefit-item animate-on-scroll"><i class="fas fa-utensils"></i><br><strong>Sociedade</strong><br>Alimentos sem veneno, água pura e saúde para todos.</div>
-            <div class="benefit-item animate-on-scroll"><i class="fas fa-chart-line"></i><br><strong>Economia</strong><br>Liderança global, empregos verdes e inovação.</div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-globe-americas"></i></div>
+                <h3>Para o Planeta</h3>
+                <p>Redução do desmatamento, conservação da biodiversidade, sequestro de carbono e recuperação de solos degradados.</p>
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check"></i> Carbono neutro</li>
+                    <li><i class="fas fa-check"></i> Biodiversidade protegida</li>
+                    <li><i class="fas fa-check"></i> Água preservada</li>
+                </ul>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>Para o Produtor</h3>
+                <p>Solo mais fértil, redução de custos com insumos, acesso a mercados verdes e certificações premium.</p>
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check"></i> +15% renda média</li>
+                    <li><i class="fas fa-check"></i> Crédito verde</li>
+                    <li><i class="fas fa-check"></i> Selos internacionais</li>
+                </ul>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                <h3>Para a Sociedade</h3>
+                <p>Alimentos mais saudáveis, sem agrotóxicos, água limpa e ar puro para todos os brasileiros.</p>
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check"></i> Segurança alimentar</li>
+                    <li><i class="fas fa-check"></i> Qualidade de vida</li>
+                    <li><i class="fas fa-check"></i> Saúde pública</li>
+                </ul>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Para a Economia</h3>
+                <p>Geração de empregos verdes, inovação tecnológica e liderança global do agro brasileiro.</p>
+                <ul class="benefit-list">
+                    <li><i class="fas fa-check"></i> +2 milhões empregos</li>
+                    <li><i class="fas fa-check"></i> Inovação aberta</li>
+                    <li><i class="fas fa-check"></i> Exportações verdes</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="depoimentos" class="testimonials">
+<!-- ==================== SOLUÇÕES SECTION ==================== -->
+<section id="solucoes" class="section solucoes">
     <div class="container">
-        <h2 class="section-title animate-on-scroll">Quem está transformando</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card animate-on-scroll">🌱 “A integração lavoura-pecuária aumentou minha renda em 30% e recuperou as nascentes.” – Ana Paula, MT</div>
-            <div class="testimonial-card animate-on-scroll">🚜 “Energia solar no pivô reduziu 50% nos custos. Sustentabilidade virou lucro.” – João, GO</div>
-            <div class="testimonial-card animate-on-scroll">💚 “Nosso selo carbono neutro abriu mercado na Europa.” – Coop. AgroVerde</div>
+        <div class="section-header">
+            <span class="section-tag">Tecnologias</span>
+            <h2 class="section-title">Soluções Inovadoras</h2>
+            <p class="section-subtitle">Tecnologia de ponta a serviço da sustentabilidade</p>
+        </div>
+        
+        <div class="solucoes-grid">
+            <div class="solucao-item">
+                <div class="solucao-image">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Agricultura de Precisão</h3>
+                <p>Drones, sensores e IA para monitoramento em tempo real das lavouras, reduzindo desperdícios.</p>
+                <div class="solucao-tech">
+                    <span>IoT</span>
+                    <span>Machine Learning</span>
+                    <span>Big Data</span>
+                </div>
+            </div>
+            
+            <div class="solucao-item">
+                <div class="solucao-image">
+                    <i class="fas fa-droplet"></i>
+                </div>
+                <h3>Irrigação Inteligente</h3>
+                <p>Sistemas automatizados que aplicam água apenas onde e quando necessário, com economia de até 60%.</p>
+                <div class="solucao-tech">
+                    <span>Sensores</span>
+                    <span>Automação</span>
+                    <span>Climatologia</span>
+                </div>
+            </div>
+            
+            <div class="solucao-item">
+                <div class="solucao-image">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3>Bioeconomia Circular</h3>
+                <p>Aproveitamento de resíduos para produção de biogás, biofertilizantes e novos produtos.</p>
+                <div class="solucao-tech">
+                    <span>Biogás</span>
+                    <span>Compostagem</span>
+                    <span>Upcycling</span>
+                </div>
+            </div>
+            
+            <div class="solucao-item">
+                <div class="solucao-image">
+                    <i class="fas fa-chart-simple"></i>
+                </div>
+                <h3>Blockchain Rastreável</h3>
+                <p>Registro imutável da cadeia produtiva, garantindo origem sustentável e acesso a mercados premium.</p>
+                <div class="solucao-tech">
+                    <span>Blockchain</span>
+                    <span>Rastreabilidade</span>
+                    <span>Certificação</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<div class="container">
-    <div class="newsletter animate-on-scroll">
-        <h3>🌿 Receba insights do agro sustentável</h3>
-        <p>Inovações, cases e tendências direto no seu e-mail.</p>
-        <input type="email" placeholder="Seu melhor e-mail" id="emailNews">
-        <button onclick="alert('🌱 Obrigado! Você está conectado ao futuro do agro.')">Inscrever-se</button>
+<!-- ==================== DEPOIMENTOS SECTION ==================== -->
+<section id="depoimentos" class="section depoimentos">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Casos Reais</span>
+            <h2 class="section-title">Quem já está transformando</h2>
+            <p class="section-subtitle">Produtores e especialistas que adotaram a sustentabilidade como caminho</p>
+        </div>
+        
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"A integração lavoura-pecuária-floresta revolucionou minha propriedade. Em 5 anos, recuperei as nascentes, aumentei a renda em 30% e reduzi custos com fertilizantes."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AP</div>
+                    <div class="author-info">
+                        <h4>Ana Paula Silva</h4>
+                        <span>Produtora Rural, Mato Grosso</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"Instalamos energia solar nos pivôs de irrigação. A conta de energia caiu 50% e nosso café agora tem certificação carbono neutro, abrindo mercado na Europa."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JC</div>
+                    <div class="author-info">
+                        <h4>João Carlos Mendes</h4>
+                        <span>Cafeicultor, Minas Gerais</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"A cooperativa adotou o manejo regenerativo em 10 mil hectares. O solo se recuperou, a produtividade subiu 25% e ganhamos o prêmio de sustentabilidade do setor."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">CV</div>
+                    <div class="author-info">
+                        <h4>Coop. AgroVerde</h4>
+                        <span>Paraná</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<footer>
-    <div class="footer-grid">
-        <div><h3>🌾 Agro Forte</h3><p>Produção e meio ambiente em harmonia.</p></div>
-        <div><h4>Links</h4><p><a href="#home" style="color:#ffd166;">Início</a><br><a href="#pilares" style="color:#ffd166;">Pilares</a><br><a href="#impacto" style="color:#ffd166;">Impacto</a></p></div>
-        <div><h4>Contato</h4><p>sustentabilidade@agroforte.com<br>+55 (62) 99999-1234</p></div>
-        <div class="social-icons"><h4>Redes</h4><a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-youtube"></i></a></div>
+<!-- ==================== NEWSLETTER SECTION ==================== -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-card">
+            <div class="newsletter-icon">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h3>Receba insights do agro sustentável</h3>
+            <p>Inovações, cases de sucesso e tendências do setor direto no seu e-mail</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <div class="form-group">
+                    <input type="text" id="newsName" placeholder="Seu nome" required>
+                    <input type="email" id="newsEmail" placeholder="Seu melhor e-mail" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Inscrever-se gratuitamente
+                </button>
+            </form>
+            <p class="newsletter-note">💚 Receba apenas conteúdo relevante. Cancelar quando quiser.</p>
+        </div>
     </div>
-    <p style="text-align:center; margin-top:2rem;">© 2025 Agro Forte – Futuro Sustentável | Equilíbrio que alimenta o mundo 🌍</p>
+</section>
+
+<!-- ==================== CONTATO SECTION ==================== -->
+<section id="contato" class="section contato">
+    <div class="container">
+        <div class="contato-grid">
+            <div class="contato-info">
+                <span class="section-tag">Fale Conosco</span>
+                <h2>Vamos construir<br>o futuro do agro juntos</h2>
+                <p>Entre em contato para parcerias, consultorias ou para saber mais sobre como implementar práticas sustentáveis na sua propriedade.</p>
+                
+                <div class="contato-detalhes">
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Visite-nos</strong>
+                            <p>SHIS QI 11, Brasília - DF, 71600-000</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Ligue para nós</strong>
+                            <p>+55 (61) 99999-1234</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Envie um e-mail</strong>
+                            <p>sustentabilidade@agroforte.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contato-form">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Nome completo" required>
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" placeholder="Telefone">
+                        <input type="text" placeholder="Cidade/Estado">
+                    </div>
+                    <textarea rows="5" placeholder="Sua mensagem..."></textarea>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Enviar mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Agro</span><span class="logo-accent">Forte</span>
+                </div>
+                <p>Produção e meio ambiente em harmonia. Alimentando o mundo sem destruir o planeta.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#impacto">Impacto</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Cases de sucesso</a></li>
+                    <li><a href="#">Materiais gratuitos</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Certificações</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Código de Ética</a></li>
+                    <li><a href="#">Relatório de Impacto</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Agro Forte - Futuro Sustentável. Todos os direitos reservados.</p>
+            <p class="footer-mission">🌱 É possível alimentar o mundo e cuidar da nossa casa comum.</p>
+        </div>
+    </div>
 </footer>
 
-<script>
-    // Animação de scroll
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-            }
-        });
-    }, { threshold: 0.2 });
-    animateElements.forEach(el => observer.observe(el));
+<!-- Botão "Voltar ao topo" -->
+<button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-    // Header shrink no scroll
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('mainHeader');
-        if (window.scrollY > 50) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
-    });
-
-    // Contagem animada dos números
-    const counters = document.querySelectorAll('.stat-number');
-    const speed = 150;
-    const startCounting = () => {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const count = parseInt(counter.innerText);
-                const increment = Math.ceil(target / speed);
-                if (count < target) {
-                    counter.innerText = count + increment;
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerText = target + (counter.innerText.includes('%') ? '' : '');
-                    if (counter.getAttribute('data-target') === '70') counter.innerText = '-70%';
-                    else if (counter.getAttribute('data-target') === '40') counter.innerText = '+40%';
-                    else if (counter.getAttribute('data-target') === '15') counter.innerText = '+15%';
-                    else if (counter.getAttribute('data-target') === '30') counter.innerText = '30M';
-                }
-            };
-            updateCount();
-        });
-    };
-
-    const statsSection = document.querySelector('.stats');
-    let counted = false;
-    const statsObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !counted) {
-            counted = true;
-            startCounting();
-        }
-    }, { threshold: 0.5 });
-    if (statsSection) statsObserver.observe(statsSection);
-
-    // Active nav on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (scrollY >= sectionTop) current = section.getAttribute('id');
-        });
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
-        });
-    });
-</script>
+<!-- Scripts -->
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/counters.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/newsletter.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
