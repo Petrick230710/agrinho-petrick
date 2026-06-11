@@ -3,104 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Agro Forte - Revolucionando a agricultura com tecnologia sustentável de ponta">
+    <meta name="description" content="Agro Forte - A Revolução da Agricultura Sustentável com Tecnologia de Ponta">
     <meta name="theme-color" content="#00ff88">
-    <title>Agro Forte | O Futuro da Agricultura Sustentável</title>
+    <title>Agro Forte | Revolução Sustentável 4.0</title>
     
-    <!-- Preconnect para otimização -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/images/icon-192.png">
 </head>
 <body>
 
 <!-- PRELOADER -->
 <div id="preloader">
-    <div class="preloader-overlay"></div>
     <div class="preloader-content">
-        <div class="preloader-logo">
-            <span class="logo-leaf">🌱</span>
-            <span class="logo-text">AGRO FORTE</span>
+        <div class="preloader-circle">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#00ff88" stroke-width="2" stroke-dasharray="283" stroke-dashoffset="75">
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-dasharray="220" stroke-dashoffset="55">
+                    <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
         </div>
-        <div class="preloader-progress-container">
-            <div class="preloader-progress-bar"></div>
-            <div class="preloader-percent">0%</div>
-        </div>
-        <div class="preloader-status">CARREGANDO SISTEMA</div>
-        <div class="preloader-dots">
-            <span></span><span></span><span></span>
+        <div class="preloader-text">CARREGANDO SISTEMA</div>
+        <div class="preloader-bar">
+            <div class="preloader-bar-fill"></div>
         </div>
     </div>
 </div>
 
-<!-- CURSOR PERSONALIZADO -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-
-<!-- PARTÍCULAS FLUTUANTES -->
-<div class="particles-container" id="particlesContainer"></div>
+<!-- PARTÍCULAS -->
+<div class="particles" id="particles"></div>
 
 <!-- HERO SECTION -->
 <section class="hero">
-    <canvas id="hero-canvas"></canvas>
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+        <source src="https://cdn.pixabay.com/video/2022/08/09/127328-735712387_large.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     
     <div class="hero-content">
         <div class="hero-badge">
             <i class="fas fa-leaf"></i>
-            <span>SISTEMA OPERACIONAL AGRO 4.0</span>
+            <span>SISTEMA AGRO 4.0</span>
             <i class="fas fa-microchip"></i>
         </div>
         
-        <h1 class="hero-title" id="heroTitle">
-            <span class="text-gradient">Agro Forte</span>
-            <span>Futuro Sustentável</span>
+        <h1 class="hero-title">
+            <div class="line">
+                <span class="word">🌾</span>
+                <span class="word">AGRO</span>
+                <span class="word text-gradient">FORTE</span>
+            </div>
+            <div class="line">
+                <span class="word">FUTURO</span>
+                <span class="word text-gradient">SUSTENTÁVEL</span>
+            </div>
         </h1>
         
         <div class="hero-subtitle">
-            <div id="typed-output"></div>
-            <div class="typed-cursor"></div>
+            <div class="typed-container">
+                <span class="typed-prefix">&gt;</span>
+                <span id="typed-output"></span>
+                <span class="typed-cursor"></span>
+            </div>
         </div>
         
         <div class="hero-buttons">
             <button class="btn-primary" id="exploreBtn">
-                <i class="fas fa-rocket"></i>
-                <span>EXPLORAR SISTEMA</span>
+                <i class="fas fa-rocket"></i> EXPLORAR SISTEMA
             </button>
             <button class="btn-outline" id="demoBtn">
-                <i class="fas fa-play"></i>
-                <span>VER DEMO</span>
+                <i class="fas fa-play"></i> VER DEMO 3D
             </button>
         </div>
         
         <div class="hero-stats">
             <div class="stat-card">
-                <div class="stat-number" id="stat1" data-target="98.7">0</div>
+                <div class="stat-number" id="stat1">0</div>
                 <div class="stat-label">EFICIÊNCIA HÍDRICA</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat2" data-target="156">0</div>
+                <div class="stat-number" id="stat2">0</div>
                 <div class="stat-label">PROJETOS ATIVOS</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat3" data-target="24">0</div>
-                <div class="stat-label">PAÍSES IMPACTADOS</div>
+                <div class="stat-number" id="stat3">0</div>
+                <div class="stat-label">PAÍSES</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat4" data-target="87">0</div>
+                <div class="stat-number" id="stat4">0</div>
                 <div class="stat-label">REDUÇÃO CO₂</div>
             </div>
         </div>
@@ -114,21 +108,17 @@
     </div>
 </section>
 
-<!-- SEÇÃO DE TECNOLOGIAS -->
+<!-- SEÇÃO DE TECNOLOGIA -->
 <section class="tech-section">
-    <div class="section-container">
+    <div class="container">
         <div class="section-header">
             <div class="section-tag">TECH STACK</div>
             <h2 class="section-title">Tecnologia que<span class="text-gradient"> Revoluciona</span></h2>
-            <div class="section-divider"></div>
         </div>
         
         <div class="tech-grid">
-            <div class="tech-card" data-delay="0">
-                <div class="tech-icon">
-                    <i class="fas fa-microchip"></i>
-                    <div class="tech-glow"></div>
-                </div>
+            <div class="tech-card">
+                <div class="tech-icon">🌾</div>
                 <h3>Agricultura 4.0</h3>
                 <p>IA, drones autônomos e sensores IoT para monitoramento em tempo real com precisão centimétrica.</p>
                 <div class="tech-metrics">
@@ -137,11 +127,8 @@
                 </div>
             </div>
             
-            <div class="tech-card" data-delay="100">
-                <div class="tech-icon">
-                    <i class="fas fa-water"></i>
-                    <div class="tech-glow"></div>
-                </div>
+            <div class="tech-card">
+                <div class="tech-icon">💧</div>
                 <h3>Gestão Hídrica</h3>
                 <p>Sistema preditivo de irrigação que economiza até 62% de água mantendo a produtividade máxima.</p>
                 <div class="tech-metrics">
@@ -150,11 +137,8 @@
                 </div>
             </div>
             
-            <div class="tech-card" data-delay="200">
-                <div class="tech-icon">
-                    <i class="fas fa-globe-americas"></i>
-                    <div class="tech-glow"></div>
-                </div>
+            <div class="tech-card">
+                <div class="tech-icon">🌍</div>
                 <h3>Carbono Neutro</h3>
                 <p>Blockchain para rastreamento e comercialização de créditos de carbono verificados internacionalmente.</p>
                 <div class="tech-metrics">
@@ -163,16 +147,13 @@
                 </div>
             </div>
             
-            <div class="tech-card" data-delay="300">
-                <div class="tech-icon">
-                    <i class="fas fa-solar-panel"></i>
-                    <div class="tech-glow"></div>
-                </div>
+            <div class="tech-card">
+                <div class="tech-icon">⚡</div>
                 <h3>Bioenergia</h3>
                 <p>Microgrids inteligentes com energia solar, biogás e armazenamento para independência energética.</p>
                 <div class="tech-metrics">
                     <span>⚡ 100% renovável</span>
-                    <span>🏭 -94% custo energia</span>
+                    <span>🏭 -94% custo</span>
                 </div>
             </div>
         </div>
@@ -181,76 +162,74 @@
 
 <!-- SEÇÃO DE IMPACTO -->
 <section class="impact-section">
-    <div class="section-container">
+    <div class="container">
         <div class="impact-grid">
-            <div class="impact-content">
+            <div>
                 <div class="section-tag">IMPACTO REAL</div>
                 <h2 class="section-title">Números que<span class="text-gradient"> Transformam</span></h2>
-                <p>Monitoramento em tempo real de todas as operações, gerando dados concretos sobre o impacto positivo no meio ambiente e na produtividade.</p>
+                <p style="font-size: 1.2rem; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 40px;">
+                    Monitoramento em tempo real de todas as operações, gerando dados concretos sobre o impacto positivo no meio ambiente.
+                </p>
                 
                 <div class="impact-stats">
-                    <div class="impact-stat">
-                        <div class="impact-number" id="impact1" data-target="1250000">0</div>
-                        <div class="impact-label">HECTARES REGENERADOS</div>
+                    <div>
+                        <div class="impact-number" id="impact1">0</div>
+                        <h4>HECTARES REGENERADOS</h4>
                     </div>
-                    <div class="impact-stat">
-                        <div class="impact-number" id="impact2" data-target="45000">0</div>
-                        <div class="impact-label">FAMÍLIAS BENEFICIADAS</div>
+                    <div>
+                        <div class="impact-number" id="impact2">0</div>
+                        <h4>FAMÍLIAS BENEFICIADAS</h4>
                     </div>
                 </div>
             </div>
             
-            <div class="impact-dashboard">
-                <div class="dashboard-container">
-                    <div class="dashboard-header">
-                        <div class="dashboard-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <div class="dashboard-title">AGRO-OS v4.0</div>
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <div class="dashboard-dot"></div>
+                    <div class="dashboard-dot"></div>
+                    <div class="dashboard-dot"></div>
+                    <div class="dashboard-title">AGRO-OS v4.0 // MONITOR</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">PRODUTIVIDADE MÉDIA</div>
+                    <div class="metric-value" id="dashMetric1">+0%</div>
+                    <div class="metric-bar">
+                        <div class="metric-bar-fill" id="bar1" style="width: 0%"></div>
                     </div>
-                    <div class="dashboard-content">
-                        <div class="metric-row">
-                            <div class="metric-card">
-                                <div class="metric-name">PRODUTIVIDADE</div>
-                                <div class="metric-value" id="dashMetric1">+38.7%</div>
-                                <div class="metric-trend up">vs média nacional</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-name">SAÚDE DO SOLO</div>
-                                <div class="metric-progress">
-                                    <div class="progress-fill" style="width: 78%"></div>
-                                </div>
-                                <div class="metric-value">78%</div>
-                            </div>
-                        </div>
-                        <div class="metric-card full">
-                            <div class="metric-name">CARBONO SEQUESTRADO</div>
-                            <div class="metric-large" id="dashMetric2">2.4M</div>
-                            <div class="metric-unit">ton CO₂ equivalente</div>
-                        </div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">SAÚDE DO SOLO</div>
+                    <div class="metric-value" id="dashMetric2">0%</div>
+                    <div class="metric-bar">
+                        <div class="metric-bar-fill" id="bar2" style="width: 0%"></div>
                     </div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-label">CARBONO SEQUESTRADO</div>
+                    <div class="metric-value" id="dashMetric3">0</div>
+                    <div class="metric-unit" style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">ton CO₂ equivalente</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- SEÇÃO DE NEWSLETTER -->
+<!-- NEWSLETTER -->
 <section class="newsletter-section">
-    <div class="section-container">
+    <div class="container">
         <div class="newsletter-card">
             <div class="newsletter-icon">
                 <i class="fas fa-chart-line"></i>
-                <div class="icon-pulse"></div>
             </div>
             <h3>Receba o Agro Insights Report</h3>
-            <p>Análises exclusivas, tendências de mercado e cases de sucesso entregues semanalmente para líderes do agro.</p>
+            <p>Análises exclusivas, tendências de mercado e cases de sucesso entregues semanalmente.</p>
             
             <form id="newsletterForm" class="newsletter-form">
-                <div class="form-group">
-                    <input type="text" id="newsName" placeholder="Nome completo" required>
-                    <input type="email" id="newsEmail" placeholder="E-mail corporativo" required>
-                </div>
+                <input type="text" id="newsName" placeholder="Nome completo" required>
+                <input type="email" id="newsEmail" placeholder="E-mail corporativo" required>
                 <button type="submit" class="btn-subscribe">
                     <span>ASSINAR NEWSLETTER</span>
                     <i class="fas fa-arrow-right"></i>
@@ -258,9 +237,9 @@
             </form>
             
             <div class="newsletter-trust">
-                <span><i class="fas fa-lock"></i> Seus dados estão seguros</span>
-                <span><i class="fas fa-envelope"></i> 1 e-mail por semana</span>
-                <span><i class="fas fa-chart-line"></i> Exclusivo para líderes</span>
+                <span><i class="fas fa-lock"></i> Dados seguros</span>
+                <span><i class="fas fa-envelope"></i> 1x por semana</span>
+                <span><i class="fas fa-chart-line"></i> Conteúdo exclusivo</span>
             </div>
         </div>
     </div>
@@ -268,76 +247,60 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <div class="footer-logo">🌱 AGRO FORTE</div>
-            <p>Revolucionando a agricultura com tecnologia de ponta e compromisso com o futuro do planeta.</p>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">🌱 AGRO<span>FORTE</span></div>
+                <p style="color: rgba(255,255,255,0.6); line-height: 1.6;">Revolucionando a agricultura com tecnologia de ponta e compromisso com o futuro do planeta.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">AgroCloud</a></li>
+                        <li><a href="#">BioSense</a></li>
+                        <li><a href="#">CarbonTracker</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Cases</a></li>
+                        <li><a href="#">Docs</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Termos</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         
-        <div class="footer-links">
-            <div class="link-group">
-                <h4>Plataforma</h4>
-                <ul>
-                    <li><a href="#">AgroCloud</a></li>
-                    <li><a href="#">BioSense</a></li>
-                    <li><a href="#">CarbonTracker</a></li>
-                    <li><a href="#">API Developers</a></li>
-                </ul>
-            </div>
-            <div class="link-group">
-                <h4>Recursos</h4>
-                <ul>
-                    <li><a href="#">Blog Técnico</a></li>
-                    <li><a href="#">Webinars</a></li>
-                    <li><a href="#">Cases de Sucesso</a></li>
-                    <li><a href="#">Documentação</a></li>
-                </ul>
-            </div>
-            <div class="link-group">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Segurança</a></li>
-                    <li><a href="#">Compliance</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <div class="copyright">© 2025 Agro Forte Labs. Todos os direitos reservados.</div>
-        <div class="footer-badges">
-            <span class="badge">B Corp</span>
-            <span class="badge">Carbono Neutro</span>
-            <span class="badge">ESG</span>
+        <div class="footer-bottom">
+            <p>© 2025 Agro Forte Labs. Todos os direitos reservados.</p>
         </div>
     </div>
 </footer>
 
-<!-- BACK TO TOP -->
 <button id="backToTop" class="back-to-top">
     <i class="fas fa-arrow-up"></i>
 </button>
 
-<!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="assets/js/core/three-scene.js"></script>
-<script src="assets/js/core/particles.js"></script>
-<script src="assets/js/modules/preloader.js"></script>
-<script src="assets/js/modules/cursor.js"></script>
-<script src="assets/js/modules/typewriter.js"></script>
-<script src="assets/js/modules/counters.js"></script>
-<script src="assets/js/modules/scroll-reveal.js"></script>
-<script src="assets/js/modules/animations.js"></script>
-<script src="assets/js/core/app.js"></script>
-
+<script src="assets/js/main.js"></script>
 </body>
 </html>
